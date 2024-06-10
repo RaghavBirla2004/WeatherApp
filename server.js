@@ -1,6 +1,7 @@
 const express = require("express");
 const axios = require("axios");
 const app = express();
+const PORT = process.env.PORT || 8080;
 
 
 app.set("view engine", "ejs");
@@ -34,7 +35,7 @@ app.get("/weather", async (req, res) => {
 });
 
 
-const port = process.env.PORT || 8080;
-app.listen(port, () => {
-  console.log(`App is running on port ${port}`);
-});
+
+app.listen(PORT, () => {
+    console.log('Server is listenin on PORT :' + PORT);
+})
