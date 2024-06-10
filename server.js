@@ -11,7 +11,8 @@ app.use(express.static("public"));
 
 
 app.get("/", (req, res) => {
-  res.render("index", { weather: null, error: null });
+  res.send("Hello world")
+  // res.render("index", { weather: null, error: null });
 });
 
 app.get("/weather", async (req, res) => {
